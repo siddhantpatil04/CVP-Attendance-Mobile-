@@ -1,0 +1,16 @@
+# Netlify build settings for CVP Attendance (web / iPhone / Android browser version)
+# This file overrides the settings in the Netlify dashboard.
+[build]
+  base    = "app"
+  # app/src is stored as src.tar.gz (keeps the repo under GitHub's 100-files-per-upload limit)
+  command = "tar -xzf src.tar.gz && npx expo export -p web"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Every page loads the app
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200
