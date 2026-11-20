@@ -1,0 +1,45 @@
+{
+    "cli":  {
+                "version":  "\u003e= 16.0.0",
+                "appVersionSource":  "local"
+            },
+    "build":  {
+                  "development":  {
+                                      "developmentClient":  true,
+                                      "distribution":  "internal",
+                                      "environment":  "development",
+                                      "env":  {
+                                                  "EXPO_PUBLIC_SUPABASE_URL":  "https://sqnsevxtjxdysnifzvxo.supabase.co",
+                                                  "EXPO_PUBLIC_SUPABASE_ANON_KEY":  "sb_publishable_C_wrbvQBae6zjW0A6BcRnw_Ckb4vKhj"
+                                              }
+                                  },
+                  "preview":  {
+                                  "distribution":  "internal",
+                                  "channel":  "preview",
+                                  "android":  {
+                                                  "buildType":  "apk"
+                                              },
+                                  "environment":  "preview",
+                                  "env":  {
+                                              "EXPO_PUBLIC_SUPABASE_URL":  "https://sqnsevxtjxdysnifzvxo.supabase.co",
+                                              "EXPO_PUBLIC_SUPABASE_ANON_KEY":  "sb_publishable_C_wrbvQBae6zjW0A6BcRnw_Ckb4vKhj"
+                                          }
+                              },
+                  "production":  {
+                                     "channel":  "production",
+                                     "android":  {
+                                                     "buildType":  "app-bundle"
+                                                 },
+                                     "environment":  "production",
+                                     "env":  {
+                                                 "EXPO_PUBLIC_SUPABASE_URL":  "https://sqnsevxtjxdysnifzvxo.supabase.co",
+                                                 "EXPO_PUBLIC_SUPABASE_ANON_KEY":  "sb_publishable_C_wrbvQBae6zjW0A6BcRnw_Ckb4vKhj"
+                                             }
+                                 }
+              },
+    "submit":  {
+                   "production":  {
+
+                                  }
+               }
+}
