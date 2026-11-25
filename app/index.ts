@@ -1,6 +1,7 @@
 import { registerRootComponent } from 'expo';
 
 import './src/lib/webAlert';
+import './src/lib/webScroll';   // web / desktop only: four-direction scrolling (does nothing on the phone)
 import App from './App';
 
 // registerRootComponent calls AppRegistry.registerComponent('main', () => App);

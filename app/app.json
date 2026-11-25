@@ -3,7 +3,7 @@
     "name": "CVP Attendance",
     "slug": "cvp-attendance",
     "scheme": "cvpattendance",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "orientation": "portrait",
     "runtimeVersion": {
       "policy": "appVersion"
@@ -20,7 +20,9 @@
       "supportsTablet": false,
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false,
-        "NSAppTransportSecurity": { "NSAllowsArbitraryLoads": true }
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true
+        }
       }
     },
     "android": {
@@ -61,7 +63,22 @@
       "expo-sharing",
       "@react-native-community/datetimepicker",
       "expo-font",
-      ["expo-build-properties", { "android": { "usesCleartextTraffic": true } }]
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/android-icon-monochrome.png",
+          "color": "#1677FF",
+          "defaultChannel": "approvals"
+        }
+      ]
     ],
     "extra": {
       "eas": {
