@@ -242,11 +242,3 @@ Changes that add a new phone permission or a new native package need a new `eas 
 - **After you change the code:** run `.\build-desktop.ps1` to make a new installer and copy it to the other computers again,
   OR put your Netlify address in `desktop/app-config.json` (`"url": "https://your-site.netlify.app"`) before building:
   those desktops then always load the newest version from the internet, and the Admin's **Publish Update** button makes them sign in again.
-
----
-## Note: app/src is packed as app/src.tar.gz
-The GitHub website only accepts fewer than 100 files per upload, so the app's `src` folder (127 files)
-is stored as one file: `app/src.tar.gz`. Netlify unpacks it automatically during the build (see `netlify.toml`).
-
-To edit the code on a PC: open PowerShell in the `app` folder and run `tar -xzf src.tar.gz`.
-After editing, pack it again before uploading: `tar -czf src.tar.gz src`
