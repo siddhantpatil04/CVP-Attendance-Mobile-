@@ -242,3 +242,13 @@ Changes that add a new phone permission or a new native package need a new `eas 
 - **After you change the code:** run `.\build-desktop.ps1` to make a new installer and copy it to the other computers again,
   OR put your Netlify address in `desktop/app-config.json` (`"url": "https://your-site.netlify.app"`) before building:
   those desktops then always load the newest version from the internet, and the Admin's **Publish Update** button makes them sign in again.
+
+---
+## Note: some folders are packed (GitHub website upload limit)
+The GitHub website only accepts fewer than 100 files per upload, so two folders are stored as single files:
+
+- `app/src.tar.gz` - the app code (`app/src`). Netlify unpacks it automatically during the build (see `netlify.toml`).
+- `supabase/sql_files.tar.gz` - the SQL scripts (`supabase/*.sql` and sub-folders). Not needed for the build.
+
+To unpack on a PC: open PowerShell in that folder and run `tar -xzf src.tar.gz` (or `tar -xzf sql_files.tar.gz`).
+To pack again after editing (in the `app` folder): `tar -czf src.tar.gz src`
